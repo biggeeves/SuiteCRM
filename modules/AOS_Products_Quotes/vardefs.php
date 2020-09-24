@@ -56,6 +56,7 @@ $dictionary['AOS_Products_Quotes'] = array(
                 array(
                     'name' => 'getCurrencyDropDown',
                     'returns' => 'html',
+                    'onListView' => true,
                 ),
             ),
         'part_number' => array(
@@ -107,7 +108,7 @@ $dictionary['AOS_Products_Quotes'] = array(
             'required' => false,
             'name' => 'product_qty',
             'vname' => 'LBL_PRODUCT_QTY',
-            'type' => 'int',
+            'type' => 'decimal',
             'massupdate' => 0,
             'comments' => '',
             'help' => '',
@@ -119,6 +120,7 @@ $dictionary['AOS_Products_Quotes'] = array(
             'len' => '18',
             'size' => '20',
             'enable_range_search' => false,
+            'precision' => '4',
          ),
         'product_cost_price' => array(
             'required' => false,
@@ -430,7 +432,7 @@ $dictionary['AOS_Products_Quotes'] = array(
         'product_id' => array(
             'required' => false,
             'name' => 'product_id',
-            'vname' => '',
+            'vname' => 'LBL_PRODUCT_ID',
             'type' => 'id',
             'massupdate' => 0,
             'comments' => '',
@@ -471,6 +473,7 @@ $dictionary['AOS_Products_Quotes'] = array(
          ),
         'aos_products' => array(
             'name' => 'aos_products',
+            'vname' => 'LBL_AOS_PRODUCTS',
             'type' => 'link',
             'relationship' => 'aos_product_quotes_aos_products',
             'module' => 'AOS_Products',
@@ -479,6 +482,7 @@ $dictionary['AOS_Products_Quotes'] = array(
          ),
         'aos_contracts' => array(
             'name' => 'aos_contracts',
+            'vname' => 'LBL_AOS_CONTRACTS',
             'type' => 'link',
             'relationship' => 'aos_contracts_aos_products_quotes',
             'module' => 'AOS_Contracts',
@@ -487,6 +491,7 @@ $dictionary['AOS_Products_Quotes'] = array(
          ),
         'aos_quotes' => array(
             'name' => 'aos_quotes',
+            'vname' => 'LBL_AOS_QUOTES',
             'type' => 'link',
             'relationship' => 'aos_quotes_aos_product_quotes',
             'module' => 'AOS_Quotes',
@@ -495,6 +500,7 @@ $dictionary['AOS_Products_Quotes'] = array(
          ),
         'aos_invoices' => array(
             'name' => 'aos_invoices',
+            'vname' => 'LBL_AOS_INVOICES',
             'type' => 'link',
             'relationship' => 'aos_invoices_aos_product_quotes',
             'module' => 'AOS_Invoices',
